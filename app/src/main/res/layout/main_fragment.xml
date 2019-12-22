@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="6dp">
+
+        <com.efremov.anyquestions.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Хотите что-то узнать?"
+            android:textSize="18sp"
+            android:letterSpacing="0.05"
+            android:textColor="@android:color/white"
+            app:typeFaceAsset="fonts/barselona.ttf"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.efremov.anyquestions.CustomFontTextView
+        android:id="@+id/questionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="@color/color_1"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="40dp"
+        android:visibility="gone"
+        app:typeFaceAsset="fonts/forward.otf"/>
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_round_corner_primary_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="40dp"
+        android:elevation="6dp">
+
+        <com.efremov.anyquestions.CustomFontTextView
+            android:id="@+id/getYourQuestionView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:text="Задайте вопрос"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_centerInParent="true"
+            app:typeFaceAsset="fonts/forward.otf"/>
+    </RelativeLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/getYourQuestionView"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Get your question"-->
+<!--        android:textColor="@color/color_1"-->
+<!--        android:background="@color/colorPrimary"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_marginBottom="40dp"/>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
