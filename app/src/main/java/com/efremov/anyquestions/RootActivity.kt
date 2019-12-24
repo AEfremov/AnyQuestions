@@ -38,7 +38,7 @@ class RootActivity : BaseActivity() {
 
         db = QuestionDataBase.getInstance(this)
 
-
+        setData()
 
         initMainScreen()
     }
@@ -82,6 +82,14 @@ class RootActivity : BaseActivity() {
             val intent = Intent(activity, RootActivity::class.java)
             activity.overridePendingTransition(0, 0)
             return intent
+        }
+    }
+
+    fun setData() {
+        val sourceQuestions = resources.getStringArray(R.array.questions_list).toCollection(ArrayList())
+        sourceQuestions.forEachIndexed { index, s ->
+            val questionData = QuestionData(index.toLong(), s)
+            insertQuestionDataInDb(questionData)
         }
     }
 }

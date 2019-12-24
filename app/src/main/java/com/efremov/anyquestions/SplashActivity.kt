@@ -1,4 +1,4 @@
-package com.efremov.anyquestions.ui.main
+package com.efremov.anyquestions
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
