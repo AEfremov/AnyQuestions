@@ -20,4 +20,8 @@ class SettingsFragment : BaseFragment() {
             
         }
     }
+
+    companion object {
+
+    }
 }

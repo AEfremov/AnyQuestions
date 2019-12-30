@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 
 class RootActivity : BaseActivity() {
 
@@ -13,7 +14,6 @@ class RootActivity : BaseActivity() {
     private val currentFragment
         get() = supportFragmentManager.findFragmentById(R.id.mainContainer) as BaseFragment?
 
-    private var db: QuestionDataBase? = null
     private lateinit var dbWorkerThread: DbWorkerThread
     private val uiHandler = Handler()
 
@@ -36,21 +36,22 @@ class RootActivity : BaseActivity() {
         dbWorkerThread = DbWorkerThread("dbWorkerThread")
         dbWorkerThread.start()
 
-        db = QuestionDataBase.getInstance(this)
-
         setData()
 
         initMainScreen()
     }
 
     private fun insertQuestionDataInDb(questionData: QuestionData) {
-        val task = Runnable { db?.questionDataDao()?.insert(questionData) }
+        val task = Runnable {
+            App.db?.questionDataDao()?.insert(questionData)
+            Log.d("insertQuestionDataInDb", questionData.questionName)
+        }
         dbWorkerThread.postTask(task)
     }
 
     private fun fetchQuestionDataFromDb() {
         val task = Runnable {
-            val questionData = db?.questionDataDao()?.getAllQuestions() as List<QuestionData>
+            val questionData = App.db?.questionDataDao()?.getAllQuestions() as List<QuestionData>
         }
         dbWorkerThread.postTask(task)
     }
