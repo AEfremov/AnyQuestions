@@ -13,8 +13,13 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".QuestionActivity"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity
             android:name=".RootActivity"
-            android:label="@string/title_activity_root"></activity>
+            android:label="@string/title_activity_root"
+            android:screenOrientation="sensorPortrait"/>
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="sensorPortrait"
@@ -29,6 +34,5 @@
             android:name=".MainActivity"
             android:screenOrientation="sensorPortrait" />
     </application>
-
 
 </manifest>

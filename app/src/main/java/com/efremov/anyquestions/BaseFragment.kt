@@ -26,14 +26,14 @@ abstract class BaseFragment : Fragment() {
     protected fun showProgressDialog(progress: Boolean) {
         if (!isAdded) return
 
-//        val fragment = childFragmentManager.findFragmentByTag(PROGRESS_TAG)
-//        if (fragment != null && !progress) {
-//            (fragment as ProgressDialog).dismissAllowingStateLoss()
-//            childFragmentManager.executePendingTransactions()
-//        } else if (fragment == null && progress) {
-//            ProgressDialog().show(childFragmentManager, PROGRESS_TAG)
-//            childFragmentManager.executePendingTransactions()
-//        }
+        val fragment = childFragmentManager.findFragmentByTag(PROGRESS_TAG)
+        if (fragment != null && !progress) {
+            (fragment as ProgressDialog).dismissAllowingStateLoss()
+            childFragmentManager.executePendingTransactions()
+        } else if (fragment == null && progress) {
+            ProgressDialog().show(childFragmentManager, PROGRESS_TAG)
+            childFragmentManager.executePendingTransactions()
+        }
     }
 
     open fun onBackPressed() {}
