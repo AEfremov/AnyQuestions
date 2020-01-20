@@ -6,7 +6,10 @@ import android.os.Handler
 import android.view.WindowManager
 import com.efremov.anyquestions.RootActivity
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : BaseActivity() {
+
+    override val layoutRes: Int
+        get() = R.layout.activity_splash
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

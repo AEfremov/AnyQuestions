@@ -4,7 +4,7 @@
     <item
         android:id="@+id/tab_questions"
         android:title="Вопросы"
-        android:icon="@drawable/ic_sentiment_satisfied_black_24dp"/>
+        android:icon="@drawable/ic_question_24dp"/>
 
     <item
         android:id="@+id/tab_settings"

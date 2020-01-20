@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import androidx.lifecycle.ViewModelProviders
 
 class RootActivity : BaseActivity() {
 
@@ -13,6 +14,8 @@ class RootActivity : BaseActivity() {
 
     private val currentFragment
         get() = supportFragmentManager.findFragmentById(R.id.mainContainer) as BaseFragment?
+
+    private lateinit var rootViewModel: RootViewModel
 
     private lateinit var dbWorkerThread: DbWorkerThread
     private val uiHandler = Handler()
@@ -32,6 +35,8 @@ class RootActivity : BaseActivity() {
 //        )
 //        setupActionBarWithNavController(navController, appBarConfiguration)
 //        navView.setupWithNavController(navController)
+
+        rootViewModel = ViewModelProviders.of(this).get(RootViewModel::class.java)
 
         dbWorkerThread = DbWorkerThread("dbWorkerThread")
         dbWorkerThread.start()

@@ -25,7 +25,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="40dp"
         android:enabled="false"
-        app:typeFaceAsset="fonts/forward.otf"
+        app:typeFaceAsset="fonts/Gagalin-Regular.otf"
+        android:letterSpacing="0.05"
         style="@style/CustomFontStyle"/>
 
     <TextView

@@ -22,10 +22,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Настройки"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:letterSpacing="0.05"
             android:textColor="@android:color/white"
-            app:typeFaceAsset="fonts/barselona.ttf"/>
+            app:typeFaceAsset="fonts/SkolSerifa.ttf"/>
     </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
@@ -48,7 +48,7 @@
             android:textSize="18sp"
             android:textColor="@color/color_1"
             android:letterSpacing="0.05"
-            app:typeFaceAsset="fonts/barselona.ttf"
+            app:typeFaceAsset="fonts/SkolSerifa.ttf"
             android:layout_centerVertical="true"/>
 
         <com.efremov.anyquestions.CustomFontTextView
@@ -59,7 +59,7 @@
             android:textSize="20sp"
             android:textColor="@color/color_1"
             android:letterSpacing="0.05"
-            app:typeFaceAsset="fonts/barselona.ttf"
+            app:typeFaceAsset="fonts/SkolSerifa.ttf"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"/>
     </RelativeLayout>
@@ -84,7 +84,7 @@
             android:textSize="18sp"
             android:textColor="@color/color_1"
             android:letterSpacing="0.05"
-            app:typeFaceAsset="fonts/barselona.ttf"
+            app:typeFaceAsset="fonts/SkolSerifa.ttf"
             android:layout_centerVertical="true"/>
 
         <ImageView

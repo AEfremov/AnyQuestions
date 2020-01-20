@@ -28,10 +28,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Хотите что-то узнать?"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:letterSpacing="0.05"
             android:textColor="@android:color/white"
-            app:typeFaceAsset="fonts/barselona.ttf"/>
+            app:typeFaceAsset="fonts/Golos-Text-Medium.ttf"/>
     </androidx.appcompat.widget.Toolbar>
 
     <com.efremov.anyquestions.CustomFontTextView
@@ -70,7 +70,8 @@
             android:text="Задайте вопрос"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:layout_centerInParent="true"
-            app:typeFaceAsset="fonts/forward.otf"/>
+            android:letterSpacing="0.05"
+            app:typeFaceAsset="fonts/Gagalin-Regular.otf"/>
     </RelativeLayout>
 
 <!--    <Button-->
