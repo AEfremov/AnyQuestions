@@ -7,6 +7,7 @@ class App : Application() {
     companion object {
 
         var db: QuestionDataBase? = null
+        var questionsCount = 0
     }
 
     override fun onCreate() {

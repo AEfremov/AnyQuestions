@@ -13,6 +13,9 @@ class SettingsFragment : BaseFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        allQuestionsCountView.text = App.questionsCount.toString()
+        answerQuestionsCountView.text = App.questionsCount.toString()
+
         questionsCountView.setOnClickListener {
 
         }

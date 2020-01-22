@@ -31,7 +31,7 @@
             android:textSize="20sp"
             android:letterSpacing="0.05"
             android:textColor="@android:color/white"
-            app:typeFaceAsset="fonts/Golos-Text-Medium.ttf"/>
+            app:typeFaceAsset="fonts/Gagalin-Regular.otf"/>
     </androidx.appcompat.widget.Toolbar>
 
     <com.efremov.anyquestions.CustomFontTextView

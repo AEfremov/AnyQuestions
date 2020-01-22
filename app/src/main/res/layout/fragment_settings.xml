@@ -8,6 +8,12 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainFragment">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_main"
+        android:scaleType="centerCrop"/>
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -25,7 +31,7 @@
             android:textSize="20sp"
             android:letterSpacing="0.05"
             android:textColor="@android:color/white"
-            app:typeFaceAsset="fonts/SkolSerifa.ttf"/>
+            app:typeFaceAsset="fonts/Gagalin-Regular.otf"/>
     </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
@@ -36,32 +42,68 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         android:layout_marginTop="20dp"
-        android:background="?attr/selectableItemBackground"
+        android:background="#F0E0F5"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+        android:paddingEnd="16dp"
+        android:elevation="6dp">
 
         <com.efremov.anyquestions.CustomFontTextView
-            android:id="@+id/setQuestionsCountView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Количество вопросов:"
+            android:text="Вопросов всего:"
             android:textSize="18sp"
             android:textColor="@color/color_1"
             android:letterSpacing="0.05"
-            app:typeFaceAsset="fonts/SkolSerifa.ttf"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif"/>
 
         <com.efremov.anyquestions.CustomFontTextView
-            android:id="@+id/questionsCountValueView"
+            android:id="@+id/allQuestionsCountView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="500"
             android:textSize="20sp"
             android:textColor="@color/color_1"
             android:letterSpacing="0.05"
-            app:typeFaceAsset="fonts/SkolSerifa.ttf"
             android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            app:typeFaceAsset="fonts/Gagalin-Regular.otf"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setQuestionsForAnswerView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/questionsCountView"
+        android:layout_marginTop="20dp"
+        android:background="#F0E0F5"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:elevation="6dp">
+
+        <com.efremov.anyquestions.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вопросы для ответа:"
+            android:textSize="18sp"
+            android:textColor="@color/color_1"
+            android:letterSpacing="0.05"
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif"/>
+
+        <com.efremov.anyquestions.CustomFontTextView
+            android:id="@+id/answerQuestionsCountView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:textSize="20sp"
+            android:textColor="@color/color_1"
+            android:letterSpacing="0.05"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:typeFaceAsset="fonts/Gagalin-Regular.otf"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -70,21 +112,21 @@
         android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/questionsCountView"
+        app:layout_constraintTop_toBottomOf="@id/setQuestionsForAnswerView"
         android:layout_marginTop="20dp"
-        android:background="?attr/selectableItemBackground"
+        android:background="#F0E0F5"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp">
+        android:paddingEnd="16dp"
+        android:elevation="6dp">
 
         <com.efremov.anyquestions.CustomFontTextView
             android:id="@+id/addNewQuestionView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Добавьте свой вопрос"
+            android:text="Добавьте свой"
             android:textSize="18sp"
             android:textColor="@color/color_1"
             android:letterSpacing="0.05"
-            app:typeFaceAsset="fonts/SkolSerifa.ttf"
             android:layout_centerVertical="true"/>
 
         <ImageView

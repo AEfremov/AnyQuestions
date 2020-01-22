@@ -17,8 +17,8 @@ class RootActivity : BaseActivity() {
 
     private lateinit var rootViewModel: RootViewModel
 
-    private lateinit var dbWorkerThread: DbWorkerThread
-    private val uiHandler = Handler()
+//    private lateinit var dbWorkerThread: DbWorkerThread
+//    private val uiHandler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
@@ -38,28 +38,28 @@ class RootActivity : BaseActivity() {
 
         rootViewModel = ViewModelProviders.of(this).get(RootViewModel::class.java)
 
-        dbWorkerThread = DbWorkerThread("dbWorkerThread")
-        dbWorkerThread.start()
+//        dbWorkerThread = DbWorkerThread("dbWorkerThread")
+//        dbWorkerThread.start()
 
-        setData()
+//        setData()
 
         initMainScreen()
     }
 
-    private fun insertQuestionDataInDb(questionData: QuestionData) {
-        val task = Runnable {
-            App.db?.questionDataDao()?.insert(questionData)
-            Log.d("insertQuestionDataInDb", questionData.questionName)
-        }
-        dbWorkerThread.postTask(task)
-    }
+//    private fun insertQuestionDataInDb(questionData: QuestionData) {
+//        val task = Runnable {
+//            App.db?.questionDataDao()?.insert(questionData)
+//            Log.d("insertQuestionDataInDb", questionData.questionName)
+//        }
+//        dbWorkerThread.postTask(task)
+//    }
 
-    private fun fetchQuestionDataFromDb() {
-        val task = Runnable {
-            val questionData = App.db?.questionDataDao()?.getAllQuestions() as List<QuestionData>
-        }
-        dbWorkerThread.postTask(task)
-    }
+//    private fun fetchQuestionDataFromDb() {
+//        val task = Runnable {
+//            val questionData = App.db?.questionDataDao()?.getAllQuestions() as List<QuestionData>
+//        }
+//        dbWorkerThread.postTask(task)
+//    }
 
     override fun onResumeFragments() {
         super.onResumeFragments()
@@ -71,7 +71,7 @@ class RootActivity : BaseActivity() {
 
     override fun onDestroy() {
         QuestionDataBase.destroyInstance()
-        dbWorkerThread.quit()
+//        dbWorkerThread.quit()
         super.onDestroy()
     }
 
@@ -91,11 +91,11 @@ class RootActivity : BaseActivity() {
         }
     }
 
-    fun setData() {
-        val sourceQuestions = resources.getStringArray(R.array.questions_list).toCollection(ArrayList())
-        sourceQuestions.forEachIndexed { index, s ->
-            val questionData = QuestionData(index.toLong(), s)
-            insertQuestionDataInDb(questionData)
-        }
-    }
+//    fun setData() {
+//        val sourceQuestions = resources.getStringArray(R.array.questions_list).toCollection(ArrayList())
+//        sourceQuestions.forEachIndexed { index, s ->
+//            val questionData = QuestionData(index.toLong(), s)
+//            insertQuestionDataInDb(questionData)
+//        }
+//    }
 }

@@ -6,13 +6,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_main"
+        android:scaleType="centerCrop"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="6dp">
+
+        <com.efremov.anyquestions.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ваш вопрос"
+            android:textSize="20sp"
+            android:letterSpacing="0.05"
+            android:textColor="@android:color/white"
+            app:typeFaceAsset="fonts/Gagalin-Regular.otf"/>
+    </androidx.appcompat.widget.Toolbar>
+
     <EditText
-        android:id="@+id/newQuestionInput"
+        android:id="@+id/newQuestionView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="Введите текст нового вопроса"
+        android:background="#F5EED3"
+        android:textColor="@android:color/black"
+        android:minLines="5"
+        android:maxLines="10"
+        android:scrollbars="vertical"
+        android:inputType="textMultiLine"
+        android:gravity="top"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:elevation="6dp"/>
 
     <com.efremov.anyquestions.CustomFontTextView
         android:id="@+id/saveQuestionView"
