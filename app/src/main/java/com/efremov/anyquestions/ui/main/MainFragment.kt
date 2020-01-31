@@ -19,7 +19,7 @@ class MainFragment : BaseFragment() {
         get() = R.layout.main_fragment
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun getInstance() = MainFragment()
     }
 
     private lateinit var viewModel: MainViewModel

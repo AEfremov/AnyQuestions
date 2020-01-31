@@ -57,8 +57,8 @@ class RootFragment : BaseFragment() {
     }
 
     private fun createNewFragments() : HashMap<String, BaseFragment> = hashMapOf(
-        tabKeys[0] to MainFragment(),
-        tabKeys[1] to SettingsFragment()
+        tabKeys[0] to MainFragment.getInstance(),
+        tabKeys[1] to SettingsFragment.getInstance()
     )
 
     private fun findFragments() : HashMap<String, BaseFragment> = hashMapOf(

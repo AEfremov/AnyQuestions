@@ -8,6 +8,7 @@ class App : Application() {
 
         var db: QuestionDataBase? = null
         var questionsCount = 0
+        var questionForAnswerCount = 0
     }
 
     override fun onCreate() {

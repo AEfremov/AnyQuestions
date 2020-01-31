@@ -45,6 +45,7 @@ class SplashActivity : BaseActivity() {
         val task = Runnable {
             val questionData = App.db?.questionDataDao()?.getAllQuestions() as List<QuestionData>
             App.questionsCount = questionData.size
+            App.questionForAnswerCount = questionData.size
         }
         dbWorkerThread.postTask(task)
     }

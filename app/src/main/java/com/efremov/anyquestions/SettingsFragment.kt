@@ -2,7 +2,6 @@ package com.efremov.anyquestions
 
 import android.content.Intent
 import android.os.Bundle
-import com.efremov.anyquestions.BaseFragment
 import kotlinx.android.synthetic.main.fragment_settings.*
 
 class SettingsFragment : BaseFragment() {
@@ -14,7 +13,7 @@ class SettingsFragment : BaseFragment() {
         super.onActivityCreated(savedInstanceState)
 
         allQuestionsCountView.text = App.questionsCount.toString()
-        answerQuestionsCountView.text = App.questionsCount.toString()
+        answerQuestionsCountView.text = App.questionForAnswerCount.toString()
 
         questionsCountView.setOnClickListener {
 
@@ -27,5 +26,8 @@ class SettingsFragment : BaseFragment() {
 
     companion object {
 
+        fun getInstance() : SettingsFragment {
+            return SettingsFragment()
+        }
     }
 }
