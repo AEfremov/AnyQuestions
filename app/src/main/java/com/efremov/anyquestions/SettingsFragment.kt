@@ -15,9 +15,13 @@ class SettingsFragment : BaseFragment() {
         allQuestionsCountView.text = App.questionsCount.toString()
         answerQuestionsCountView.text = App.questionForAnswerCount.toString()
 
-        questionsCountView.setOnClickListener {
+//        questionsCountView.setOnClickListener {
+//
+//        }
 
-        }
+//        setQuestionsForAnswerView.setOnClickListener {
+//
+//        }
 
         newQuestionView.setOnClickListener {
             startActivity(Intent(activity, QuestionActivity::class.java))
