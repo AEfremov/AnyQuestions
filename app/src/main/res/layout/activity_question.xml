@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:elevation="6dp">
 
-        <com.efremov.anyquestions.CustomFontTextView
+        <com.efremov.anyquestions.core.components.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ваш вопрос"
@@ -54,7 +54,7 @@
         android:layout_marginEnd="16dp"
         android:elevation="6dp"/>
 
-    <com.efremov.anyquestions.CustomFontTextView
+    <com.efremov.anyquestions.core.components.CustomFontTextView
         android:id="@+id/saveQuestionView"
         android:layout_width="200dp"
         android:layout_height="50dp"

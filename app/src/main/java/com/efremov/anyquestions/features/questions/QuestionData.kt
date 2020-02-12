@@ -1,4 +1,4 @@
-package com.efremov.anyquestions
+package com.efremov.anyquestions.features.questions
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

@@ -1,8 +1,11 @@
-package com.efremov.anyquestions
+package com.efremov.anyquestions.features.root
 
 import android.os.Handler
 import android.util.Log
 import androidx.lifecycle.ViewModel
+import com.efremov.anyquestions.App
+import com.efremov.anyquestions.features.questions.QuestionData
+import com.efremov.anyquestions.core.DbWorkerThread
 
 class RootViewModel : ViewModel() {
 
@@ -10,7 +13,8 @@ class RootViewModel : ViewModel() {
     private val uiHandler = Handler()
 
     init {
-        dbWorkerThread = DbWorkerThread("dbWorkerThread")
+        dbWorkerThread =
+            DbWorkerThread("dbWorkerThread")
         dbWorkerThread.start()
 
         setData()

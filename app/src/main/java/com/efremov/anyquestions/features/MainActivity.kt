@@ -1,9 +1,10 @@
-package com.efremov.anyquestions
+package com.efremov.anyquestions.features
 
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.efremov.anyquestions.R
 import com.efremov.anyquestions.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {

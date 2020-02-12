@@ -1,10 +1,12 @@
-package com.efremov.anyquestions
+package com.efremov.anyquestions.features.questions
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
+import com.efremov.anyquestions.R
+import com.efremov.anyquestions.platform.BaseFragment
 
 class NewQuestionFragment : BaseFragment() {
 

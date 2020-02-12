@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <com.efremov.anyquestions.CustomFontTextView
+    <com.efremov.anyquestions.core.components.CustomFontTextView
         android:id="@+id/getYourQuestionView"
         android:layout_width="200dp"
         android:layout_height="50dp"

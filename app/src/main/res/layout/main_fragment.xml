@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:elevation="6dp">
 
-        <com.efremov.anyquestions.CustomFontTextView
+        <com.efremov.anyquestions.core.components.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Хотите что-то узнать?"
@@ -34,7 +34,7 @@
             app:typeFaceAsset="fonts/Gagalin-Regular.otf"/>
     </androidx.appcompat.widget.Toolbar>
 
-    <com.efremov.anyquestions.CustomFontTextView
+    <com.efremov.anyquestions.core.components.CustomFontTextView
         android:id="@+id/questionTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
         android:layout_marginBottom="40dp"
         android:elevation="6dp">
 
-        <com.efremov.anyquestions.CustomFontTextView
+        <com.efremov.anyquestions.core.components.CustomFontTextView
             android:id="@+id/getYourQuestionView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -1,11 +1,15 @@
-package com.efremov.anyquestions
+package com.efremov.anyquestions.features.splash
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import android.view.WindowManager
-import com.efremov.anyquestions.RootActivity
+import com.efremov.anyquestions.App
+import com.efremov.anyquestions.R
+import com.efremov.anyquestions.core.DbWorkerThread
+import com.efremov.anyquestions.features.questions.QuestionData
+import com.efremov.anyquestions.features.root.RootActivity
+import com.efremov.anyquestions.platform.BaseActivity
 
 class SplashActivity : BaseActivity() {
 
@@ -20,7 +24,8 @@ class SplashActivity : BaseActivity() {
 
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
 
-        dbWorkerThread = DbWorkerThread("dbWorkerThread")
+        dbWorkerThread =
+            DbWorkerThread("dbWorkerThread")
         dbWorkerThread.start()
 
         setData()
@@ -53,7 +58,11 @@ class SplashActivity : BaseActivity() {
     fun setData() {
         val sourceQuestions = resources.getStringArray(R.array.questions_list).toCollection(ArrayList())
         sourceQuestions.forEachIndexed { index, s ->
-            val questionData = QuestionData(index.toLong(), s)
+            val questionData =
+                QuestionData(
+                    index.toLong(),
+                    s
+                )
             insertQuestionDataInDb(questionData)
         }
         fetchQuestionDataFromDb()

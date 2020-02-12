@@ -1,12 +1,14 @@
-package com.efremov.anyquestions
+package com.efremov.anyquestions.features.questions
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.view.View
 import android.widget.Scroller
+import com.efremov.anyquestions.App
+import com.efremov.anyquestions.R
+import com.efremov.anyquestions.core.DbWorkerThread
 import com.efremov.anyquestions.ext.visible
 import kotlinx.android.synthetic.main.activity_question.*
 
@@ -48,9 +50,15 @@ class QuestionActivity : AppCompatActivity() {
         }
 
         saveQuestionView.setOnClickListener {
-            dbWorkerThread = DbWorkerThread("dbWorkerThread")
+            dbWorkerThread =
+                DbWorkerThread("dbWorkerThread")
             dbWorkerThread!!.start()
-            insertQuestionDataInDb(QuestionData(1000, newQuestionView.text.toString()))
+            insertQuestionDataInDb(
+                QuestionData(
+                    1000,
+                    newQuestionView.text.toString()
+                )
+            )
             saveQuestionView.isEnabled = false
             saveQuestionView.visible(false)
             questionSavedView.visible(true)

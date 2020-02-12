@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import com.efremov.anyquestions.BaseFragment
+import com.efremov.anyquestions.platform.BaseFragment
 import com.efremov.anyquestions.R
 import kotlinx.android.synthetic.main.main_fragment.*
 import kotlin.random.Random

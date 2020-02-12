@@ -1,8 +1,12 @@
-package com.efremov.anyquestions
+package com.efremov.anyquestions.features.root
 
 import android.os.Bundle
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationAdapter
+import com.efremov.anyquestions.R
+import com.efremov.anyquestions.ext.color
+import com.efremov.anyquestions.features.settings.SettingsFragment
+import com.efremov.anyquestions.platform.BaseFragment
 import com.efremov.anyquestions.ui.main.MainFragment
 import kotlinx.android.synthetic.main.fragment_root.*
 
@@ -22,7 +26,9 @@ class RootFragment : BaseFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        AHBottomNavigationAdapter(activity, R.menu.main_bottom_menu).apply {
+        AHBottomNavigationAdapter(activity,
+            R.menu.main_bottom_menu
+        ).apply {
             setupWithBottomNavigation(bottomBar)
         }
         with(bottomBar) {

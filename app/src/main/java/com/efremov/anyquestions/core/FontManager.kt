@@ -1,4 +1,4 @@
-package com.efremov.anyquestions
+package com.efremov.anyquestions.core
 
 import android.content.res.AssetManager
 import android.graphics.Typeface

@@ -1,4 +1,4 @@
-package com.efremov.anyquestions
+package com.efremov.anyquestions.core.components
 
 import android.content.Context
 import android.content.res.TypedArray
@@ -6,6 +6,8 @@ import android.graphics.Typeface
 import android.util.AttributeSet
 import android.util.Log
 import android.widget.TextView
+import com.efremov.anyquestions.core.FontManager
+import com.efremov.anyquestions.R
 
 class CustomFontTextView : TextView {
 
@@ -22,15 +24,23 @@ class CustomFontTextView : TextView {
 
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         if (isInEditMode) return
-        val typedArray: TypedArray = context!!.obtainStyledAttributes(attrs, R.styleable.CustomFontTextView)
+        val typedArray: TypedArray = context!!.obtainStyledAttributes(attrs,
+            R.styleable.CustomFontTextView
+        )
         val fontAsset = typedArray.getString(R.styleable.CustomFontTextView_typeFaceAsset)
         if (fontAsset != null) {
             if (fontAsset.isNotEmpty()) {
                 var tf: Typeface? = null
                 if (fontAsset == "ttf") {
-                    tf = FontManager.getFont(fontAsset, TTF)
+                    tf = FontManager.getFont(
+                        fontAsset,
+                        TTF
+                    )
                 } else {
-                    tf = FontManager.getFont(fontAsset, OTF)
+                    tf = FontManager.getFont(
+                        fontAsset,
+                        OTF
+                    )
                 }
                 var style = Typeface.NORMAL
                 val size = textSize

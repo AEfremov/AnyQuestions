@@ -1,11 +1,13 @@
-package com.efremov.anyquestions
+package com.efremov.anyquestions.features.root
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.util.Log
 import androidx.lifecycle.ViewModelProviders
+import com.efremov.anyquestions.features.questions.QuestionDataBase
+import com.efremov.anyquestions.R
+import com.efremov.anyquestions.platform.BaseActivity
+import com.efremov.anyquestions.platform.BaseFragment
 
 class RootActivity : BaseActivity() {
 
@@ -78,7 +80,10 @@ class RootActivity : BaseActivity() {
     private fun initMainScreen() {
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.mainContainer, RootFragment())
+            .replace(
+                R.id.mainContainer,
+                RootFragment()
+            )
             .commitNow()
     }
 

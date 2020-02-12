@@ -1,4 +1,4 @@
-package com.efremov.anyquestions
+package com.efremov.anyquestions.features.questions
 
 import android.content.Context
 import androidx.room.Database

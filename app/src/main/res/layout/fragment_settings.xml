@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:elevation="6dp">
 
-        <com.efremov.anyquestions.CustomFontTextView
+        <com.efremov.anyquestions.core.components.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Настройки"
@@ -47,7 +47,7 @@
         android:paddingEnd="16dp"
         android:elevation="6dp">
 
-        <com.efremov.anyquestions.CustomFontTextView
+        <com.efremov.anyquestions.core.components.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Вопросов всего:"
@@ -57,7 +57,7 @@
             android:layout_centerVertical="true"
             android:fontFamily="sans-serif"/>
 
-        <com.efremov.anyquestions.CustomFontTextView
+        <com.efremov.anyquestions.core.components.CustomFontTextView
             android:id="@+id/allQuestionsCountView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
         android:elevation="6dp"
         android:visibility="gone">
 
-        <com.efremov.anyquestions.CustomFontTextView
+        <com.efremov.anyquestions.core.components.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Вопросы для ответа:"
@@ -94,7 +94,7 @@
             android:layout_centerVertical="true"
             android:fontFamily="sans-serif"/>
 
-        <com.efremov.anyquestions.CustomFontTextView
+        <com.efremov.anyquestions.core.components.CustomFontTextView
             android:id="@+id/answerQuestionsCountView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
         android:paddingEnd="16dp"
         android:elevation="6dp">
 
-        <com.efremov.anyquestions.CustomFontTextView
+        <com.efremov.anyquestions.core.components.CustomFontTextView
             android:id="@+id/addNewQuestionView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -162,7 +162,7 @@
         android:background="?attr/selectableItemBackground"
         android:visibility="gone">
 
-        <com.efremov.anyquestions.CustomFontTextView
+        <com.efremov.anyquestions.core.components.CustomFontTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Темная тема?"

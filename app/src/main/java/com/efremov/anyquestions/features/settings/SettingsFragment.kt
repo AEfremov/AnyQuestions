@@ -1,7 +1,11 @@
-package com.efremov.anyquestions
+package com.efremov.anyquestions.features.settings
 
 import android.content.Intent
 import android.os.Bundle
+import com.efremov.anyquestions.App
+import com.efremov.anyquestions.features.questions.QuestionActivity
+import com.efremov.anyquestions.R
+import com.efremov.anyquestions.platform.BaseFragment
 import kotlinx.android.synthetic.main.fragment_settings.*
 
 class SettingsFragment : BaseFragment() {

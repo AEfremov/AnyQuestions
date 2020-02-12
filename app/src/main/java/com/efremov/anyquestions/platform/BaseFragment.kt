@@ -1,9 +1,10 @@
-package com.efremov.anyquestions
+package com.efremov.anyquestions.platform
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.efremov.anyquestions.core.components.ProgressDialog
 
 abstract class BaseFragment : Fragment() {
 
@@ -31,7 +32,10 @@ abstract class BaseFragment : Fragment() {
             (fragment as ProgressDialog).dismissAllowingStateLoss()
             childFragmentManager.executePendingTransactions()
         } else if (fragment == null && progress) {
-            ProgressDialog().show(childFragmentManager, PROGRESS_TAG)
+            ProgressDialog()
+                .show(childFragmentManager,
+                    PROGRESS_TAG
+                )
             childFragmentManager.executePendingTransactions()
         }
     }
