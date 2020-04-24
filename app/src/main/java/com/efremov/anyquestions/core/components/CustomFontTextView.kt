@@ -5,11 +5,10 @@ import android.content.res.TypedArray
 import android.graphics.Typeface
 import android.util.AttributeSet
 import android.util.Log
-import android.widget.TextView
 import com.efremov.anyquestions.core.FontManager
 import com.efremov.anyquestions.R
 
-class CustomFontTextView : TextView {
+class CustomFontTextView : androidx.appcompat.widget.AppCompatTextView {
 
     companion object {
         const val OTF = "otf"

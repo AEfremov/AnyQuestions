@@ -60,7 +60,7 @@ class MainFragment : BaseFragment() {
             animatorSet.addListener(getQuestionEndListener(view, text))
             animatorSet.start()
         }
-        view!!.animate().alphaBy(0f).alpha(1f).start()
+        requireView().animate().alphaBy(0f).alpha(1f).start()
     }
 
     private fun getQuestionEndListener(view: TextView, text: String): AnimatorListenerAdapter {

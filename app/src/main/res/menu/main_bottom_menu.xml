@@ -3,11 +3,11 @@
 
     <item
         android:id="@+id/tab_questions"
-        android:title="Вопросы"
+        android:title="@string/title_questions"
         android:icon="@drawable/ic_question_24dp"/>
 
     <item
         android:id="@+id/tab_settings"
-        android:title="Настройки"
+        android:title="@string/title_settings"
         android:icon="@drawable/ic_settings_black_24dp"/>
 </menu>

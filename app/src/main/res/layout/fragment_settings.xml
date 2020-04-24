@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.MainFragment">
+    tools:context=".features.settings.SettingsFragment">
 
     <ImageView
         android:layout_width="match_parent"
@@ -169,7 +169,6 @@
             android:textSize="18sp"
             android:textColor="@color/color_1"
             android:letterSpacing="0.05"
-            app:typeFaceAsset="fonts/barselona.ttf"
             android:layout_centerVertical="true"/>
 
         <androidx.appcompat.widget.SwitchCompat

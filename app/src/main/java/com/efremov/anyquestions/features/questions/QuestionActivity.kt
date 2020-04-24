@@ -50,15 +50,19 @@ class QuestionActivity : AppCompatActivity() {
         }
 
         saveQuestionView.setOnClickListener {
-            dbWorkerThread =
-                DbWorkerThread("dbWorkerThread")
-            dbWorkerThread!!.start()
-            insertQuestionDataInDb(
-                QuestionData(
-                    1000,
-                    newQuestionView.text.toString()
+            try {
+                dbWorkerThread =
+                    DbWorkerThread("dbWorkerThread")
+                dbWorkerThread!!.start()
+                insertQuestionDataInDb(
+                    QuestionData(
+                        1000,
+                        newQuestionView.text.toString()
+                    )
                 )
-            )
+            } catch (t: Throwable) {
+                t.printStackTrace()
+            }
             saveQuestionView.isEnabled = false
             saveQuestionView.visible(false)
             questionSavedView.visible(true)

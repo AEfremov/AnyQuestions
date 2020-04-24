@@ -4,10 +4,16 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.efremov.anyquestions.features.questions.QuestionDataBase
 import com.efremov.anyquestions.R
 import com.efremov.anyquestions.platform.BaseActivity
 import com.efremov.anyquestions.platform.BaseFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class RootActivity : BaseActivity() {
 
@@ -27,18 +33,14 @@ class RootActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
 //        val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
+        rootViewModel = ViewModelProviders.of(this).get(RootViewModel::class.java)
+
 //        val navController = findNavController(R.id.nav_host_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
 //        val appBarConfiguration = AppBarConfiguration(
-//            setOf(
-//                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
-//            )
+//            setOf(R.id.tab_questions, R.id.tab_settings)
 //        )
 //        setupActionBarWithNavController(navController, appBarConfiguration)
 //        navView.setupWithNavController(navController)
-
-        rootViewModel = ViewModelProviders.of(this).get(RootViewModel::class.java)
 
 //        dbWorkerThread = DbWorkerThread("dbWorkerThread")
 //        dbWorkerThread.start()
